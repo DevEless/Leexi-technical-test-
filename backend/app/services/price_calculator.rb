@@ -1,30 +1,38 @@
-
 class PriceCalculator
-  def self.calculate(number_of_licenses, plan)
-    number_of_licenses = number_of_licenses.to_i
-#Boucle avec condition pour le calcul total
-    price_per_license = case plan
-                        when 'ai_meeting'
-                          if number_of_licenses < 10
-                            29
-                          elsif number_of_licenses < 50
-                            25
-                          else
-                            15
-                          end
-                        when 'enterprise'
-                          raise 'Le plan Enterprise requiert au moins 10 licences' if number_of_licenses < 10
-                          number_of_licenses < 50 ? 55 : 40
-                        else
-                          raise 'Plan inconnu'
-                        end
+  def self.calculate(nombre_licences, plan, _periode = nil)
+    nombre_licences = nombre_licences.to_i
 
-    monthly_total  = number_of_licenses * price_per_license
-    annually_total = (monthly_total * 12 * 0.9).round(2)
+    case plan
+    when 'enterprise'
+      raise 'Le plan Enterprise requiert au moins 10 licences' if nombre_licences < 10
+
+      # Définition du tarif en fonction des paliers
+      prix_unitaire = if nombre_licences >= 50
+                        40
+                      else
+                        55
+                      end
+    when 'ai_meeting'
+      prix_unitaire = if nombre_licences >= 50
+                        15
+                      elsif nombre_licences >= 10
+                        25
+                      else
+                        29
+                      end
+    else
+      raise 'Plan inconnu'
+    end
+
+    prix_mensuel = prix_unitaire * nombre_licences
+    prix_annuel = (prix_mensuel * 12).round(2)
+
+    # Remise de 10% uniquement pour plan enterprise en annuel
+    prix_annuel *= 0.9 if plan == 'enterprise'
 
     {
-      monthly: monthly_total,
-      annually: annually_total
+      monthly: prix_mensuel,
+      annually: prix_annuel.round(2)
     }
   end
 end

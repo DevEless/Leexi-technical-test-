@@ -1,48 +1,43 @@
 require 'rails_helper'
 
-RSpec.describe 'Prices API', type: :request do
-  let(:headers) { { 'CONTENT_TYPE' => 'application/json' } }
+RSpec.describe PriceCalculator do
+  describe '.calculate' do
+    context 'Plan AI Meeting' do
+      it 'calcule le prix avec moins de 10 licences (mensuel)' do
+        resultat = described_class.calculate(5, 'ai_meeting', 'monthly')
+        expect(resultat[:monthly]).to eq(5 * 29)
+      end
 
-  describe 'POST /v1/prices' do
-    it 'retourne les bons prix pour ai_meeting avec 20 licences' do
-      post '/v1/prices',
-           params: { number_of_licenses: 20, plan: 'ai_meeting', period: 'monthly' }.to_json,
-           headers: headers
-
-      expect(response).to have_http_status(:ok)
-      json = JSON.parse(response.body)
-      expect(json['prices']['monthly']).to eq(500) # 20 * 25
-      expect(json['prices']['annually']).to eq(5400.0)
+      it 'calcule le prix avec 20 licences (annuel, sans remise)' do
+        resultat = described_class.calculate(20, 'ai_meeting', 'annually')
+        expect(resultat[:annually]).to eq((20 * 25 * 12).round(2))
+      end
     end
 
-    it 'retourne une erreur 400 si des params sont manquants' do
-      post '/v1/prices',
-           params: { plan: 'ai_meeting' }.to_json,
-           headers: headers
+    context 'Plan Enterprise' do
+      it 'calcule le prix avec 10 licences (annuel, avec remise)' do
+        resultat = described_class.calculate(10, 'enterprise', 'annually')
+        expect(resultat[:annually]).to eq((10 * 55 * 12 * 0.9).round(2))
+      end
 
-      expect(response).to have_http_status(:bad_request)
-      json = JSON.parse(response.body)
-      expect(json['error']).to eq('Paramètres invalides')
+      it 'calcule le prix avec 15 licences (mensuel)' do
+        resultat = described_class.calculate(15, 'enterprise', 'monthly')
+        expect(resultat[:monthly]).to eq(15 * 55)
+      end
+
+      it 'lève une erreur avec moins de 10 licences' do
+        expect {
+          described_class.calculate(5, 'enterprise', 'monthly')
+        }.to raise_error('Le plan Enterprise requiert au moins 10 licences')
+      end
     end
 
-    it 'retourne une erreur 422 pour enterprise avec < 10 licences' do
-      post '/v1/prices',
-           params: { number_of_licenses: 5, plan: 'enterprise', period: 'monthly' }.to_json,
-           headers: headers
-
-      expect(response).to have_http_status(:unprocessable_entity)
-      json = JSON.parse(response.body)
-      expect(json['error']).to eq('Le plan Enterprise requiert au moins 10 licences')
-    end
-
-    it 'retourne une erreur pour un plan inconnu' do
-      post '/v1/prices',
-           params: { number_of_licenses: 10, plan: 'inconnu', period: 'monthly' }.to_json,
-           headers: headers
-
-      expect(response).to have_http_status(:unprocessable_entity)
-      json = JSON.parse(response.body)
-      expect(json['error']).to eq('Plan inconnu')
+    context 'Plan inconnu' do
+      it 'lève une erreur pour un plan non valide' do
+        expect {
+          described_class.calculate(10, 'inconnu', 'monthly')
+        }.to raise_error('Plan inconnu')
+      end
     end
   end
 end

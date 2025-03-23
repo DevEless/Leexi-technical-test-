@@ -295,3 +295,91 @@ Processing by V1::PricesController#create as */*
 Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:57:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by V1::PricesController#create as */*
+  Parameters: {"numberOfLicenses"=>20, "plan"=>"aiMeeting", "period"=>"monthly", "price"=>{"numberOfLicenses"=>20, "plan"=>"aiMeeting", "period"=>"monthly"}}
+Completed 400 Bad Request in 226ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:57:42 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"numberOfLicenses"=>20, "plan"=>"aiMeeting", "period"=>"monthly", "price"=>{"numberOfLicenses"=>20, "plan"=>"aiMeeting", "period"=>"monthly"}}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:57:56 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"numberOfLicenses"=>20, "plan"=>"aiMeeting", "period"=>"monthly", "price"=>{"numberOfLicenses"=>20, "plan"=>"aiMeeting", "period"=>"monthly"}}
+Completed 400 Bad Request in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:58:20 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 131ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:58:30 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:00:11 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:41:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:41:25 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+{"number_of_licenses": 20, "plan": "ai_meeting", "period": "monthly"}entreprise
+Processing by V1::PricesController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters)
+Caused by: JSON::ParserError (unexpected token at end of stream 'entreprise')
+
+Information for: ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/v1/prices_controller.rb:6:in `create'
+
+Information for cause: JSON::ParserError (unexpected token at end of stream 'entreprise'):
+  
+app/controllers/v1/prices_controller.rb:6:in `create'
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:41:38 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"entrerpise", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"entrerpise", "period"=>"monthly"}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:42:11 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"entreprise", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"entreprise", "period"=>"monthly"}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:42:26 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 16:43:12 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"enterprise", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"enterprise", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
