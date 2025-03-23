@@ -59,7 +59,7 @@ bundle exec rspec
 
 # Démarrer le serveur Rails sur le port 8080
 rails server -p 8080
-
+```
 ## Auteurs
 
 Ce projet a été réalisé dans le cadre du test technique proposé par Leexi.
