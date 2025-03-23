@@ -21,11 +21,11 @@
   
       <!-- Affichage des résultats -->
       <div v-if="prices" class="results">
-        <h2>Résultat :</h2>
-        <p>Coût mensuel total : <strong>{{ prices.monthly }} €</strong></p>
-        <p>Coût annuel total (avec 10% de remise) : <strong>{{ prices.annually }} €</strong></p>
-      </div>
-  
+  <h2>Résultat :</h2>
+  <p>Coût mensuel total : <strong>{{ prices.monthly }} €</strong></p>
+  <p>Coût annuel total : <strong>{{ prices.annually }} €</strong></p>
+  <p v-if="plan === 'enterprise'"> Une remise de 10% a été appliquée pour le plan Enterprise</p>
+</div>
       <!-- Message d'erreur éventuel -->
       <div v-if="error" class="error">
         <p style="color:red;">{{ error }}</p>
