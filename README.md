@@ -60,6 +60,27 @@ bundle exec rspec
 # Démarrer le serveur Rails sur le port 8080
 rails server -p 8080
 ```
+
+### Frontend (Nuxt 3)
+
+#### Installation et démarrage
+
+1. Se rendre dans le dossier du projet frontend :
+
+```bash
+cd frontend
+
+npm install
+
+# Démarrer le serveur
+npm run dev
+```
+
+Accéder à l'application depuis le navigateur :
+
+http://localhost:3000
+
+
 ## Auteurs
 
 Ce projet a été réalisé dans le cadre du test technique proposé par Leexi.
