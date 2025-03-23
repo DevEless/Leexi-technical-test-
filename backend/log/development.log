@@ -1,0 +1,297 @@
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:47:57 +0100
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+SyntaxError (C:/Users/qdela/Documents/projet-leexi/backend/config/routes.rb:5: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+config/routes.rb:5: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:49:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for V1::PricesController):
+  
+actionpack (8.0.2) lib/abstract_controller/base.rb:158:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.12) lib/rack/etag.rb:29:in `call'
+rack (3.1.12) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.12) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.12) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.12) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:49:42 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for V1::PricesController):
+  
+actionpack (8.0.2) lib/abstract_controller/base.rb:158:in `process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+rack (3.1.12) lib/rack/etag.rb:29:in `call'
+rack (3.1.12) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.12) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.12) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.12) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (2.0.2) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:50:51 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 422 Unprocessable Content in 20ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:52:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 422 Unprocessable Content in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:53:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 422 Unprocessable Content in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-22 15:58:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>20, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 37ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:35:40 +0100
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:35:40 +0100
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:35:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [POST] "/v1/prices"):
+  
+  
+ActionController::RoutingError (No route matches [POST] "/v1/prices"):
+  
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 192ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:35:46 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:35:55 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:00 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"enterprise", "period"=>"annually", "price"=>{"number_of_licenses"=>3, "plan"=>"enterprise", "period"=>"annually"}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:07 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:10 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:18 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>3, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:23 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>4, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>4, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:25 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:27 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:30 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>2, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>2, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:33 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:35 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:38 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:41 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>5, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:46 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>5, "plan"=>"enterprise", "period"=>"monthly", "price"=>{"number_of_licenses"=>5, "plan"=>"enterprise", "period"=>"monthly"}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:48 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>10, "plan"=>"enterprise", "period"=>"monthly", "price"=>{"number_of_licenses"=>10, "plan"=>"enterprise", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:50 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>10, "plan"=>"enterprise", "period"=>"annually", "price"=>{"number_of_licenses"=>10, "plan"=>"enterprise", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:36:59 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>10, "plan"=>"enterprise", "period"=>"annually", "price"=>{"number_of_licenses"=>10, "plan"=>"enterprise", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:37:08 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>9, "plan"=>"enterprise", "period"=>"annually", "price"=>{"number_of_licenses"=>9, "plan"=>"enterprise", "period"=>"annually"}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:38:12 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>9, "plan"=>"enterprise", "period"=>"annually", "price"=>{"number_of_licenses"=>9, "plan"=>"enterprise", "period"=>"annually"}}
+Completed 422 Unprocessable Content in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:38:15 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>9, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>9, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:38:25 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>1111, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>1111, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:38:38 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>35, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>35, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:38:43 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>35, "plan"=>"ai_meeting", "period"=>"annually", "price"=>{"number_of_licenses"=>35, "plan"=>"ai_meeting", "period"=>"annually"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/v1/prices" for ::1 at 2025-03-23 15:39:29 +0100
+Processing by V1::PricesController#create as */*
+  Parameters: {"number_of_licenses"=>50, "plan"=>"ai_meeting", "period"=>"monthly", "price"=>{"number_of_licenses"=>50, "plan"=>"ai_meeting", "period"=>"monthly"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
